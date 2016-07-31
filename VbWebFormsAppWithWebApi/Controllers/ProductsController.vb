@@ -14,17 +14,23 @@ Namespace Controllers
                 .Id = 1,
                 .Name = "Tomato Soup",
                 .Category = "Groceries",
-                .Price = 1},
+                .Price = 1,
+                .UpdateTime = DateTime.Now
+            },
             New Product() With {
                 .Id = 2,
                 .Name = "Yo-yo",
                 .Category = "Toys",
-                .Price = 3.75},
+                .Price = 3.75,
+                .UpdateTime = DateTime.Now
+            },
             New Product() With {
                 .Id = 3,
                 .Name = "Hammer",
                 .Category = "Hardware",
-                .Price = 16.99}
+                .Price = 16.99,
+                .UpdateTime = DateTime.Now
+            }
         }
 
         <Route("api/products")>

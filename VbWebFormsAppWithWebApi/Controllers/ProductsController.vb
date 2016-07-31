@@ -6,7 +6,7 @@ Namespace Controllers
         Inherits ApiController
 
         ''' <summary>
-        ''' Sample data
+        ''' Sample AJAX data
         ''' </summary>
         Dim products As List(Of Product) = New List(Of Product)() From
         {

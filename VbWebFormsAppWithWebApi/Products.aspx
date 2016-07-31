@@ -5,17 +5,17 @@
         'use strict';
 
         function getProducts() {
+            const products = $('#products');
+
             $.getJSON("api/products", data => {
-                    $('#products').empty();
+                products.empty();
 
                     $.each(data, (key, val) => {
-                        let row = '<tr><td>' + val.Name + '</td><td>' + val.Price + '</td></tr>';
+                        let row = `<tr><td>${val.Name}</td><td>${val.Price}</td></tr>`;
 
-                        //$('<tr/>', { text: row }).appendTo($('#products'));
-                        $('#products').append($(row));
+                        products.append($(row));
                     });
-                }
-            );
+                });
         }
 
         $(document).ready(getProducts);

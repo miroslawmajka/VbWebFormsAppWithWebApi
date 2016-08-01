@@ -1,5 +1,4 @@
 ﻿Imports System.Web.Http
-Imports System.Linq
 
 Namespace Controllers
     Public Class ProductsController
@@ -33,12 +32,12 @@ Namespace Controllers
             }
         }
 
-        <Route("api/products")>
+        <Route("api/allproducts")>
         Public Function GetAllProducts() As IEnumerable(Of Product)
             Return products
         End Function
 
-        <Route("api/product/{id}")>
+        <Route("api/oneproduct/{id}")>
         Public Function GetProduct(ByVal id As Integer) As IHttpActionResult
             Dim product = products.FirstOrDefault(Function(p) p.Id = id)
 

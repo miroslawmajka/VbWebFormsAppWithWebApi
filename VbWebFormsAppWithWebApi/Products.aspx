@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Contact" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.vb" Inherits="VbWebFormsAppWithWebApi.Contact" %>
+﻿<%@ Page Title="Products" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Products.aspx.vb" Inherits="VbWebFormsAppWithWebApi.Contact" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
     <script type="text/javascript">
@@ -7,7 +7,7 @@
         function getProducts() {
             const products = $('#products');
 
-            $.getJSON("api/products", data => {
+            $.getJSON("api/allproducts", data => {
                 products.empty();
 
                     $.each(data, (key, val) => {

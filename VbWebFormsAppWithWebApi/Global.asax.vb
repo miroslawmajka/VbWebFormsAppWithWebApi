@@ -1,6 +1,5 @@
 ﻿Imports System.Web.Http
 Imports System.Web.Optimization
-Imports System.Net.Http.Formatting
 
 Public Class Global_asax
     Inherits HttpApplication
